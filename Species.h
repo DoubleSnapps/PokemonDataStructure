@@ -6,86 +6,65 @@
 using namespace std;
 
 #ifndef SPECIES.H
-#define SPECIES.H
+#define SPECIES .H
 
-class SpeciesData{
+class SpeciesData
+{
 
-public:
-// Player-Mutable Data
-    struct Identifiers {
-        string nickname;
-        uint32_t experiencePoints;
-        bool pokerus;
+    struct DexInfo
+    {
+        // TODO: XP LEVEL UP CURVE
+        string spName;
+        string classification;
+        Type types[2];
+        // v TODO: switch to units library v
+        float spWeight;
+        float spHeight;
+        // ^ TODO: switch to units library ^
+        uint16_t spDexNumber;
+        uint8_t baseHappiness;
     };
 
-    Move knownMoves[4];
-
-    struct IValues {
-        uint8_t healthPoints;
-        uint8_t attack;
-        uint8_t defense;
-        uint8_t specialAttack;
-        uint8_t specialDefense;
-        uint8_t speed;
+    struct BaseStats
+    {
+        uint16_t healthPoints;
+        uint16_t attack;
+        uint16_t defense;
+        uint16_t specialAttack;
+        uint16_t specialDefense;
+        uint16_t speed;
     };
 
-    struct EValues {
-        uint8_t healthPoints;
-        uint8_t attack;
-        uint8_t defense;
-        uint8_t specialAttack;
-        uint8_t specialDefense;
-        uint8_t speed;
+    struct WildEncounter
+    {
+        uint8_t catchRate;
+        uint16_t xpYield;
+        uint16_t healthPointsEV;
+        uint16_t attackEV;
+        uint16_t defenseEV;
+        uint16_t specialAttackEV;
+        uint16_t specialDefenseEV;
+        uint16_t speedEV;
     };
 
-
-// Non-Static Non-Mutable Data (pokemon data)
-    struct GeneratedData {
-        Gender gender;
-        float sizeModifier = 1;
-        bool shiny;
-        bool alpha;
+    struct GenderBreeding
+    {
+        // [0] Female Rate, [1] Male Rate, [2] Genderless Rate
+        int GenderRatio[3];
+        enum EggGroup eggGroup1;
+        enum EggGroup eggGroup2;
+        uint8_t eggCycles;
     };
 
-// Static Non-Mutable Data (species data)
-    struct DexInfo {
-        //TODO: XP LEVEL UP CURVE
-        static string spName;
-        static string category;
-        static float spWeight;
-        static float spHeight;
-        static uint16_t spDexNumber;
+    struct ContestStats
+    {
+        uint8_t cool;
+        uint8_t beauty;
+        uint8_t cute;
+        uint8_t smart;
+        uint8_t tough;
+        uint8_t sheen;
     };
-
-    struct BaseStats {
-        static uint16_t healthPoints;
-        static uint16_t attack;
-        static uint16_t defense;
-        static uint16_t specialAttack;
-        static uint16_t specialDefense;
-        static uint16_t speed;
-    };
-
-    struct WildEncounter {
-        static uint8_t catchRate;
-        static uint16_t xpYield;
-        static uint16_t healthPointsEV;
-        static uint16_t attackEV;
-        static uint16_t defenseEV;
-        static uint16_t specialAttackEV;
-        static uint16_t specialDefenseEV;
-        static uint16_t speedEV;
-    };
-
-    struct ContestStats {
-        static uint8_t cool;
-        static uint8_t beauty;
-        static uint8_t cute;
-        static uint8_t smart;
-        static uint8_t tough; 
-        static uint8_t sheen;
-    };
-
 };
 
 #endif

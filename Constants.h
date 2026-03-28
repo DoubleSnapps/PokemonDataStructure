@@ -1,7 +1,6 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-
 /// @brief pointless abstraction is the future bro
 const int MAX_TYPES = 18;
 
@@ -11,7 +10,7 @@ enum Type{NORMAL, FIRE, WATER, GRASS, ELECTRIC, ICE,
 
 enum Gender{FEMALE, MALE, GENDERLESS};
 //TODO: fillout
-enum EggGroup {PLACEHOLDER};
+enum EggGroup {PLACEHOLDER, DITTO, NO_GROUP};
 
 enum SpecialStatus {STANDARD, REGIONAL, FOSSIL, PARADOX, ULTRA_BEAST, LEGENDARY, MYTHICAL};
 
@@ -19,4 +18,5 @@ const double matchupsArray[MAX_TYPES][MAX_TYPES] =
     {{0},
     {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}};
 
+    
 #endif
