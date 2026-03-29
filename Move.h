@@ -5,7 +5,7 @@
 using namespace std;
 
 #ifndef MOVE.H
-#define MOVE .H
+#define MOVE.H
 
 enum MoveType
 {
@@ -28,6 +28,6 @@ public:
     uint8_t priority = 1;
     uint8_t powerPoints;
 
-        
+
 };
 #endif
