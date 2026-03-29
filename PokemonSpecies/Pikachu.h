@@ -1,13 +1,15 @@
 #include<string>
-#include "Species.h"
+#include "SpeciesData.h"
 
 #ifndef PIKACHU.H
 #define PIKACHU.H
 
-class Pikachu : public SpeciesData {
-    
-};
+    DexInfo dexInfo();
 
+   
+
+
+PokemonSpecies Pikachu;
 
 
 #endif

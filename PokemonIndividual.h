@@ -1,11 +1,12 @@
 #include <cstdint>
 #include <string>
 #include "constants.h"
-#include "species.h"
+#include "speciesdata.h"
 
 using namespace std;
 
-
+#ifndef POKEMONINDIVIDUAL.H
+#define POKEMONINDIVIDUAL.H
 
 
 
@@ -47,3 +48,7 @@ using namespace std;
         bool shiny;
         bool alpha;
     };
+
+
+
+#endif
